@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>UML类图中的关系和表示方法 - luobao - 博客园</title>
+<link type="text/css" rel="stylesheet" href="/bundles/blog-common.css?v=ChDk9h03-S75WEqNhGvXkWireJ5cCWdK1xRM9NIXfnM1"/>
+<link id="MainCss" type="text/css" rel="stylesheet" href="/skins/AnotherEon001/bundle-AnotherEon001.css?v=dNz80TfH9-81kuLR86t4JWgT2tb_J0B779DQM4kw0WU1"/>
+<link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/AnotherEon001/bundle-AnotherEon001-mobile.css?v=14BbNtH7YBR-xq4qqgoRH59g81h19XFR_pQeS0AdJok1"/>
+<link title="RSS" type="application/rss+xml" rel="alternate" href="http://www.cnblogs.com/luobao/rss"/>
+<link title="RSD" type="application/rsd+xml" rel="EditURI" href="http://www.cnblogs.com/luobao/rsd.xml"/>
+<link type="application/wlwmanifest+xml" rel="wlwmanifest" href="http://www.cnblogs.com/luobao/wlwmanifest.xml"/>
+<script src="//common.cnblogs.com/script/jquery.js" type="text/javascript"></script>  
+<script type="text/javascript">var currentBlogApp = 'luobao', cb_enable_mathjax=false;var isLogined=false;</script>
+<script src="/bundles/blog-common.js?v=Luc6U_bgyPg764kNG7TcM6wg6ibyyUYRDlBLbP3UdnA1" type="text/javascript"></script>
+</head>
+<body>
+<a name="top"></a>
+
+<div id="wrapper">
+<div id="header">
+
+<div id="top">
+<h1><a id="Header1_HeaderTitle" class="headermaintitle" href="http://www.cnblogs.com/luobao/">luobao</a></h1>
+<div id="subtitle">热爱生活，热爱coding。</div>
+</div>
+<div id="sub"><div id="blog_stats">
+<div class="BlogStats">随笔 - 5, 文章 - 0, 评论 - 0, 引用 - 0</div>
+</div></div>
+
+
+
+</div>
+<div id="main_container">
+<div id="main_content">
+<div id="content">
+	
+<div id="post_detail">
+	<div class="post">
+		<h2>
+			<a id="cb_post_title_url" href="http://www.cnblogs.com/luobao/p/6369685.html">UML类图中的关系和表示方法</a>
+		</h2>
+		<div class="postbody">
+		<div id="cnblogs_post_body"><p class="MsoNormal" style="text-indent: 21.0pt"><span style="font-family: 宋体">类图是用来描述程序中的类以及它们之间的关系的，使用类图可以帮助我们简化对系统的理解。在</span><span style="text-indent: 21pt; line-height: 1.5" lang="EN-US">UML</span><span style="font-family: 宋体">类图中比较常见的关系有六种，它们分别是：依赖、关联、聚合、组合、泛化、实现，这六种关系中类之间的紧密程度是依次增强的：依赖</span><span style="text-indent: 21pt; line-height: 1.5" lang="EN-US"> &lt; </span><span style="font-family: 宋体">关联</span><span style="text-indent: 21pt; line-height: 1.5" lang="EN-US"> &lt; </span><span style="font-family: 宋体">聚合</span><span style="text-indent: 21pt; line-height: 1.5" lang="EN-US"> &lt; </span><span style="font-family: 宋体">组合</span><span style="text-indent: 21pt; line-height: 1.5" lang="EN-US"> &lt; </span><span style="font-family: 宋体">泛化</span><span style="text-indent: 21pt; line-height: 1.5" lang="EN-US"> = </span><span style="font-family: 宋体">实现。</span></p>
+<p class="MsoNormal" style="text-indent: 21.0pt"><span style="font-family: 宋体">下面分别介绍一下在</span><span lang="EN-US">UML</span><span style="font-family: 宋体">类图中类和这六种关系的表示方式。</span></p>
+<p class="MsoListParagraph" style="margin-left: 39.0pt; text-indent: -18.0pt"><span style="font-family: 宋体" lang="EN-US">□<span style="font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;">&nbsp; </span></span><span style="font-family: 宋体">类</span><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family: 宋体; color: red">【注：类图是用</span><span style="color: red" lang="EN-US">VS2013</span><span style="font-family: 宋体; color: red">画的】</span></p>
+<p class="MsoNormal" style="text-indent: 21.0pt"><span style="font-family: 宋体">类是对具有相似结构和行为的一类对象的描述，类的命名要尽量应用领域中的术语，应该明确、无歧义，以利于相互之间的理解和交流。在</span><span lang="EN-US">UML</span><span style="font-family: 宋体">类图中类由一个划分成三层的矩形表示，第一层是类的名称（抽象类一般用斜体表示），第二层是类的属性，第三层是类的操作。类成员的可见性，用</span><span lang="EN-US">+</span><span style="font-family: 宋体">表示</span><span lang="EN-US">public</span><span style="font-family: 宋体">，</span><span lang="EN-US">-</span><span style="font-family: 宋体">表示</span><span lang="EN-US">private</span><span style="font-family: 宋体">，</span><span lang="EN-US">#</span><span style="font-family: 宋体">表示</span><span lang="EN-US">protected</span><span style="font-family: 宋体">。</span></p>
+<p class="MsoNormal"><span style="font-family: 宋体">类的表示如下：</span></p>
+<p class="MsoNormal"><span lang="EN-US"><img src="http://images2015.cnblogs.com/blog/924509/201702/924509-20170206121614041-265777286.jpg" alt=""><br></span></p>
+<p class="MsoNormal"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ①</span><span style="font-family: 宋体">依赖关系（</span><span lang="EN-US">Dependence</span><span style="font-family: 宋体">）<img src="http://images2015.cnblogs.com/blog/924509/201702/924509-20170206121637885-1370448867.jpg" alt=""></span><span lang="EN-US"></span></p>
+<p class="MsoNormal" style="text-indent: 21.0pt"><span style="font-family: 宋体">依赖是一种使用关系，即一个类需要借助另一个类实现某个功能。通常是</span><span lang="EN-US">A</span><span style="font-family: 宋体">类的方法需要使用</span><span lang="EN-US">B</span><span style="font-family: 宋体">类的对象作为参数。例如，在</span><span lang="EN-US">Teacher</span><span style="font-family: 宋体">类中的</span><span lang="EN-US">Write()</span><span style="font-family: 宋体">方法需要将</span><span lang="EN-US">Blackboard</span><span style="font-family: 宋体">类的对象作为传入参数，且</span><span lang="EN-US">Teacher</span><span style="font-family: 宋体">类的</span><span lang="EN-US">Write()</span><span style="font-family: 宋体">方法依赖</span><em><span style="font-family: &quot;Arial&quot;, &quot;sans-serif&quot;; color: #2e3033; background: #F9FBFC; font-style: normal" lang="EN-US">blackboard</span></em><em><span style="font-family: 宋体; color: #2e3033; background: #F9FBFC; font-style: normal">对象的</span></em><em><span style="font-family: &quot;Arial&quot;, &quot;sans-serif&quot;; color: #2e3033; background: #F9FBFC; font-style: normal" lang="EN-US">Display()</span></em><em><span style="font-family: 宋体; color: #2e3033; background: #F9FBFC; font-style: normal">方法，所以</span></em><em><span style="font-family: &quot;Arial&quot;, &quot;sans-serif&quot;; color: #2e3033; background: #F9FBFC; font-style: normal" lang="EN-US">Teacher</span></em><em><span style="font-family: 宋体; color: #2e3033; background: #F9FBFC; font-style: normal">类依赖</span></em><em><span style="font-family: &quot;Arial&quot;, &quot;sans-serif&quot;; color: #2e3033; background: #F9FBFC; font-style: normal" lang="EN-US">Blackboard</span></em><em><span style="font-family: 宋体; color: #2e3033; background: #F9FBFC; font-style: normal">类。</span></em></p>
+<p class="MsoNormal" style="text-indent: 21.0pt"><em><span style="font-family: 宋体; color: #2e3033; background: #F9FBFC; font-style: normal">依赖关系用【箭头</span></em><em><span style="font-family: &quot;Arial&quot;, &quot;sans-serif&quot;; color: #2e3033; background: #F9FBFC; font-style: normal" lang="EN-US">+</span></em><em><span style="font-family: 宋体; color: #2e3033; background: #F9FBFC; font-style: normal">虚线】表示，箭头指向所依赖的对象。</span></em></p>
+<p class="MsoNormal" style="text-indent: 21.0pt"><span lang="EN-US"><img src="http://images2015.cnblogs.com/blog/924509/201702/924509-20170206121648354-398228820.jpg" alt=""><br></span></p>
+<p class="MsoNormal" style="text-indent: 21.0pt"><span style="font-family: 宋体">②关联关系（</span><span lang="EN-US">Association</span><span style="font-family: 宋体">）<img src="http://images2015.cnblogs.com/blog/924509/201702/924509-20170206121658869-569738994.jpg" alt=""></span><span lang="EN-US"></span></p>
+<p class="MsoNormal"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family: 宋体">关联是一种结构化的关系，用来表示一个类的对象和另一个类的对象之间有联系。通常在</span><span lang="EN-US">A</span><span style="font-family: 宋体">类中将</span><span lang="EN-US">B</span><span style="font-family: 宋体">类的对象作为成员变量，它使一个类知道另一个类的属性和方法。例如在班级类</span><span lang="EN-US">Class</span><span style="font-family: 宋体">中包含一个</span><span lang="EN-US">Student</span><span style="font-family: 宋体">类型的班长</span><span lang="EN-US">monitor</span><span style="font-family: 宋体">，他们之间可以表示为关联关系。</span></p>
+<p class="MsoNormal"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family: 宋体">关联关系用【箭头</span><span lang="EN-US">+</span><span style="font-family: 宋体">实线】表示，箭头指向所关联的对象。</span></p>
+<p class="MsoNormal"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://images2015.cnblogs.com/blog/924509/201702/924509-20170206121709229-197292963.jpg" alt=""></span></p>
+<p class="MsoNormal"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family: 宋体">③聚合关系（</span><span lang="EN-US">Aggregation</span><span style="font-family: 宋体">）<img src="http://images2015.cnblogs.com/blog/924509/201702/924509-20170206121721963-1467272844.jpg" alt=""></span><span lang="EN-US"></span></p>
+<p class="MsoNormal"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family: 宋体">聚合表示一种整体和局部的关系，在聚合关系中，成员对象是整体对象的一部分，但是成员对象又是可以独立存在的，它们有各自独立的生命周期，整体对象和成员对象之间是</span><span lang="EN-US">has a </span><span style="font-family: 宋体">的关系。例如，学生在分组讨论问题时，学生（</span><span lang="EN-US">Student</span><span style="font-family: 宋体">）是组（</span><span lang="EN-US">Team</span><span style="font-family: 宋体">）的一部分，但是学生又是可以独立存在。</span></p>
+<p class="MsoNormal"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family: 宋体">聚合关系用【空心菱形</span><span lang="EN-US">+</span><span style="font-family: 宋体">实线箭头】表示，箭头指向组成整体的元素。</span></p>
+<p class="MsoNormal"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://images2015.cnblogs.com/blog/924509/201702/924509-20170206121734307-324450044.jpg" alt=""></span></p>
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+<p class="MsoNormal"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family: 宋体">④组合关系（</span><span lang="EN-US">Composition</span><span style="font-family: 宋体">）<img src="http://images2015.cnblogs.com/blog/924509/201702/924509-20170206121752869-661544981.jpg" alt=""></span><span lang="EN-US"></span></p>
+<p class="MsoNormal"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family: 宋体">组合也是一种表示整体和局部的关系，但是和聚合关系不同的是，在组合关系中，成员对象和整体对象具有统一的生命周期，一旦整体对象不存在，成员对象也将不在存在，成员对象和整体对象之间具有同生共死的关系，整体对象和成员对象之间是</span><span lang="EN-US">contains a </span><span style="font-family: 宋体">的关系。</span></p>
+<p class="MsoNormal"><span style="font-family: 宋体">例如，人（</span><span lang="EN-US">Person</span><span style="font-family: 宋体">）和手（</span><span lang="EN-US">Hand</span><span style="font-family: 宋体">）之间的关系。</span></p>
+<p class="MsoNormal"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family: 宋体">组合关系用【实心菱形</span><span lang="EN-US">+</span><span style="font-family: 宋体">实线箭头】表示，箭头指向组成整体的元素。</span></p>
+<p class="MsoNormal"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://images2015.cnblogs.com/blog/924509/201702/924509-20170206121801010-1260646613.jpg" alt=""></span></p>
+<p class="MsoNormal"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family: 宋体">⑤泛化关系（</span><span style="font-size: 10.0pt; font-family: &quot;Arial&quot;, &quot;sans-serif&quot;; color: #2e3033; background: #F9FBFC" lang="EN-US">Generalization</span><span style="font-family: 宋体">）<img src="http://images2015.cnblogs.com/blog/924509/201702/924509-20170206121812322-2096156168.jpg" alt=""></span><span lang="EN-US"></span></p>
+<p class="MsoNormal"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family: 宋体">泛化关系也就是继承关系，用于描述父类和子类之间的关系。子类和父类之间是</span><span lang="EN-US">is a </span><span style="font-family: 宋体">的关系。例如，老师（</span><span lang="EN-US">Teacher</span><span style="font-family: 宋体">）和人（</span><span lang="EN-US">Person</span><span style="font-family: 宋体">）之间的关系。</span></p>
+<p class="MsoNormal"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family: 宋体">泛化关系用【空心三角</span><span lang="EN-US">+</span><span style="font-family: 宋体">实线表示】，三角指向父类。</span></p>
+<p class="MsoNormal"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://images2015.cnblogs.com/blog/924509/201702/924509-20170206121821729-1180371872.jpg" alt=""></span></p>
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+<p class="MsoNormal"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family: 宋体">⑥实现关系（</span><span lang="EN-US">implementation</span><span style="font-family: 宋体">）<img src="http://images2015.cnblogs.com/blog/924509/201702/924509-20170206121831588-472707061.jpg" alt=""></span><span lang="EN-US"></span></p>
+<p class="MsoNormal"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family: 宋体">实现是类和接口之间的关系，接口定义了类所具有的能力，类通过实现接口来拥有某种能力。实现类和接口之间是</span><span lang="EN-US">has a </span><span style="font-family: 宋体">的关系。</span></p>
+<p class="MsoNormal"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family: 宋体">实现关系用【空心三角</span><span lang="EN-US">+</span><span style="font-family: 宋体">虚线表示】，三角指向接口。</span></p>
+<p class="MsoNormal"><span lang="EN-US"><img src="http://images2015.cnblogs.com/blog/924509/201702/924509-20170206121838322-86307830.jpg" alt=""><br></span></p>
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+<p class="MsoNormal"><span style="font-family: 宋体">整体类图如下：</span></p>
+<p class="MsoNormal"><img src="http://images2015.cnblogs.com/blog/924509/201702/924509-20170206125021666-739449212.jpg" alt=""></p></div><div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="BlogPostCategory"></div>
+<div id="EntryTag"></div>
+<div id="blog_post_info">
+</div>
+<div class="clear"></div>
+<div id="post_next_prev"></div>
+</div>
+
+
+		</div>
+		<p class="postfoot">
+			posted on <span id="post-date">2017-02-06 12:33</span> <a href='http://www.cnblogs.com/luobao/'>luobao</a> 阅读(<span id="post_view_count">...</span>) 评论(<span id="post_comment_count">...</span>)  <a href ="https://i.cnblogs.com/EditPosts.aspx?postid=6369685" rel="nofollow">编辑</a> <a href="#" onclick="AddToWz(6369685);return false;">收藏</a>
+		</p>
+	</div>
+	<script type="text/javascript">var allowComments=true,cb_blogId=330437,cb_entryId=6369685,cb_blogApp=currentBlogApp,cb_blogUserGuid='1d6d72ba-1ef6-e511-9fc1-ac853d9f53cc',cb_entryCreatedDate='2017/2/6 12:33:00';loadViewCount(cb_entryId);var cb_postType=1;</script>
+	
+	</div><a name="!comments"></a><div id="blog-comments-placeholder"></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+<div id='comment_form' class='commentform'>
+<a name='commentform'></a>
+<div id='divCommentShow'></div>
+<div id='comment_nav'><span id='span_refresh_tips'></span><a href='javascript:void(0);' onclick='return RefreshCommentList();' id='lnk_RefreshComments' runat='server' clientidmode='Static'>刷新评论</a><a href='#' onclick='return RefreshPage();'>刷新页面</a><a href='#top'>返回顶部</a></div>
+<div id='comment_form_container'></div>
+<div class='ad_text_commentbox' id='ad_text_under_commentbox'></div>
+<div id='ad_t2'></div>
+<div id='opt_under_post'></div>
+<div id='cnblogs_c1' class='c_ad_block'></div>
+<div id='under_post_news'></div>
+<div id='cnblogs_c2' class='c_ad_block'></div>
+<div id='under_post_kb'></div>
+<div id='HistoryToday' class='c_ad_block'></div>
+<script type='text/javascript'>
+    fixPostBody();
+    setTimeout(function () { incrementViewCount(cb_entryId); }, 50);
+    deliverAdT2();
+    deliverAdC1();
+    deliverAdC2();    
+    loadNewsAndKb();
+    loadBlogSignature();
+    LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+    GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+    loadOptUnderPost();
+    GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);   
+</script>
+</div>
+
+
+</div>
+</div>
+<div id="leftmenu">
+
+
+<h3>导航</h3>
+<ul>
+<li>
+<a id="blog_nav_sitehome" href="http://www.cnblogs.com/">博客园</a></li>
+<li>
+<a id="blog_nav_myhome" class="two_words" href="http://www.cnblogs.com/luobao/">首页</a></li>
+<li>
+<a id="blog_nav_newpost" rel="nofollow" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">新随笔</a></li>
+<li>
+</li>
+<li>
+
+
+</li>
+<li>
+<a id="blog_nav_admin" class="two_words" rel="nofollow" href="https://i.cnblogs.com/">管理</a></li>
+</ul>
+
+<div id="blog-calendar" style="display:none"></div><script type="text/javascript">loadBlogDefaultCalendar();</script>
+
+<div id="blog-sidecolumn"></div><script type="text/javascript">loadBlogSideColumn();</script>
+
+</div>
+</div>
+<div class="clear"></div>
+<div id="footer">
+
+<p id="footer">
+	Powered by: 
+	<br />
+	
+	<a id="Footer1_Hyperlink3" NAME="Hyperlink1" href="http://www.cnblogs.com/" style="font-family:Verdana;font-size:12px;">博客园</a>
+	<br />
+	Copyright &copy; luobao
+</p>
+</div>
+</div>
+
+</body>
+</html>
